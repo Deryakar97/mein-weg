@@ -1,23 +1,100 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Derya'nın Kişisel Web Sitesi</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derya'nın Almanca Öğrenme Sitesi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-  <a href="index.html">Ana Sayfa</a>
-  <a href="about.html">Hakkımda</a>
-  <a href="projects.html">Öğrenme Günlüğü</a>
-</nav>
 
-<div class="container">
-  <h1>Merhaba, ben Derya!</h1>
-  <p>Bu site, öğrendiklerimi ve projelerimi paylaştığım kişisel web sitemdir.</p>
-  <p>Buradan öğrenme yolculuğumu takip edebilir ve mini projelerimi görebilirsiniz.</p>
-  <button onclick="alert('Hoş geldiniz! Öğrenme yolculuğum burada devam ediyor.')">Daha Fazla</button>
-</div>
+  <!-- Sekmeler -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Anasayfa</button>
+    <button class="tablinks" onclick="openTab(event, 'About')">Hakkımda</button>
+    <button class="tablinks" onclick="openTab(event, 'Vocab')">Öğrenme</button>
+  </div>
+
+  <!-- Anasayfa -->
+  <div id="Home" class="tabcontent">
+    <div class="home-container">
+      <h1 class="typewriter">Merhaba! Ben Derya 👋</h1>
+      <p class="subtext">Bu site, Almanca öğrenme yolculuğumu paylaştığım kişisel web sitemdir.</p>
+      <button class="btn" onclick="openTabById('Vocab')">Öğrenmeye Başla</button>
+    </div>
+
+    <!-- Su dalgacıkları -->
+    <div class="wave-container">
+      <div class="wave"></div>
+    </div>
+  </div>
+
+  <!-- Hakkımda -->
+  <div id="About" class="tabcontent">
+    <h2>Hakkımda</h2>
+    <p>Bilgisayar ve Öğretim Teknolojileri Öğretmeniyim. Almanca öğreniyorum ve öğrendiğim bilgileri bu sitede paylaşıyorum.</p>
+  </div>
+
+  <!-- Öğrenme / A1 Kelimeler -->
+  <div id="Vocab" class="tabcontent">
+    <h2>A1 Kelimeler</h2>
+    <div class="card-grid">
+
+      <!-- der kelimeler -->
+      <div class="card der"><span class="word">der Mann</span><span class="meaning">Adam</span></div>
+      <div class="card der"><span class="word">der Tisch</span><span class="meaning">Masa</span></div>
+      <div class="card der"><span class="word">der Stuhl</span><span class="meaning">Sandalye</span></div>
+
+      <!-- die kelimeler -->
+      <div class="card die"><span class="word">die Frau</span><span class="meaning">Kadın</span></div>
+      <div class="card die"><span class="word">die Schule</span><span class="meaning">Okul</span></div>
+      <div class="card die"><span class="word">die Straße</span><span class="meaning">Cadde</span></div>
+
+      <!-- das kelimeler -->
+      <div class="card das"><span class="word">das Haus</span><span class="meaning">Ev</span></div>
+      <div class="card das"><span class="word">das Buch</span><span class="meaning">Kitap</span></div>
+      <div class="card das"><span class="word">das Auto</span><span class="meaning">Araba</span></div>
+
+      <!-- articlesiz kelimeler -->
+      <div class="card noArticle"><span class="word">ich</span><span class="meaning">ben</span></div>
+      <div class="card noArticle"><span class="word">du</span><span class="meaning">sen</span></div>
+      <div class="card noArticle"><span class="word">wir</span><span class="meaning">biz</span></div>
+
+    </div>
+  </div>
+
+<script>
+  // Sekme açma
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for(i = 0; i < tabcontent.length; i++){
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for(i = 0; i < tablinks.length; i++){
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Buton ile tab açma
+  function openTabById(tabId) {
+    const evt = { currentTarget: null };
+    const tabs = document.getElementsByClassName("tablinks");
+    for(let i = 0; i < tabs.length; i++){
+      if(tabs[i].innerText.includes(tabId) || tabs[i].innerText.includes('Öğrenme')){
+        evt.currentTarget = tabs[i];
+        break;
+      }
+    }
+    openTab(evt, tabId);
+  }
+
+  // Default aç
+  document.getElementById("defaultOpen").click();
+</script>
+
 </body>
-</html>
+  </html>
