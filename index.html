@@ -10,18 +10,36 @@ body {
   background: linear-gradient(135deg,#1e3c72,#2a5298);
   color:white;
   text-align:center;
-  background-image: url('almanya.png'); /* Arka plana isteğe bağlı görsel */
+  background-image: url('almanya.png'); /* opsiyonel */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 nav { position:absolute; top:20px; right:30px;}
 nav a { color:white; text-decoration:none; margin-left:20px; font-weight:bold;}
-nav a:hover { text-decoration:underline;}
-.container { margin-top:15vh; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 15px;}
-h1 { font-size:50px; color:#ffcc00; text-shadow: 2px 2px #000; }
-p { font-size:22px; opacity:0.9; }
-button { background:#ff6600; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:18px; margin-top:20px; }
+nav a:hover { text-decoration:underline; color:#ffcc00; }
+.container { 
+  margin-top:15vh; 
+  background: rgba(0,0,0,0.5); 
+  padding: 25px; 
+  border-radius: 20px;
+  max-width: 700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+h1 { font-size:50px; color:#ffcc00; text-shadow:2px 2px #000; }
+p { font-size:22px; opacity:0.95; }
+button { 
+  background:#ff6600; 
+  color:white; 
+  border:none; 
+  padding:12px 25px; 
+  border-radius:10px; 
+  cursor:pointer; 
+  font-weight:bold; 
+  font-size:18px; 
+  margin-top:20px; 
+}
 button:hover { background:#ff8533; }
 </style>
 </head>
@@ -30,14 +48,4 @@ button:hover { background:#ff8533; }
 <a href="index.html">Ana Sayfa</a>
 <a href="about.html">Hakkımda</a>
 <a href="projects.html">Öğrenme Günlüğü</a>
-</nav>
-
-<div class="container">
-<h1>Merhaba!</h1>
-<p>Almanca öğreniyorum ve Almanya’da geleceğimi inşa ediyorum.</p>
-<p>Her gün yeni kelimeler öğreniyor ve pratik yapıyorum.</p>
-<p>Örn: <strong>Ich lerne Deutsch jeden Tag.</strong></p>
-<button onclick="alert('Hedef: A2 seviyesini 3 ayda tamamlamak')">Hedefimi Gör</button>
-</div>
-</body>
-</html>
+</  
