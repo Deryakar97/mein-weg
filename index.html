@@ -1,87 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-<title>Derya ile Almanca Öğreniyorum</title>
+<meta charset="UTF-8">
+<title>Derya'nın Kişisel Web Sitesi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg,#1e3c72,#2a5298);
-  color:white;
-  text-align:center;
-  overflow-x:hidden;
-}
-nav { position:absolute; top:20px; right:30px;}
-nav a { color:white; text-decoration:none; margin-left:20px; font-weight:bold; font-size:18px;}
-nav a:hover { color:#ffcc00; }
-
-.container {
-  margin-top:15vh;
-  max-width:700px;
-  margin-left:auto;
-  margin-right:auto;
-  background: rgba(0,0,0,0.4);
-  padding:30px;
-  border-radius:25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  position: relative;
-}
-
-h1 {
-  font-size:50px;
-  color:#ffcc00;
-  text-shadow: 2px 2px #000;
-  margin-bottom:10px;
-}
-
-p { font-size:22px; line-height:1.6; }
-
-button {
-  background:#ff6600;
-  color:white;
-  border:none;
-  padding:14px 30px;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:bold;
-  font-size:18px;
-  margin-top:20px;
-  transition: transform 0.2s;
-}
-button:hover { 
-  background:#ff8533; 
-  transform: scale(1.05);
-}
-
-/* Dalgalı alt bölüm için pseudo element */
-.container::after {
-  content:"";
-  display:block;
-  width:200%;
-  height:60px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  position:absolute;
-  bottom:-30px;
-  left:-50%;
-  transform: rotate(5deg);
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="about.html">Hakkımda</a>
-<a href="projects.html">Öğrenme Günlüğü</a>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="about.html">Hakkımda</a>
+  <a href="projects.html">Öğrenme Günlüğü</a>
 </nav>
 
 <div class="container">
-<h1>Merhaba, ben Derya!</h1>
-<p>Almanca öğreniyorum ve Almanya’da geleceğimi inşa ediyorum.</p>
-<p>Her gün yeni kelimeler öğreniyor ve pratik yapıyorum.</p>
-<p>Örn: <strong>Ich lerne Deutsch jeden Tag.</strong></p>
-<button onclick="alert('Hedef: A2 seviyesini 3 ayda tamamlamak')">Hedefimi Gör</button>
+  <h1>Merhaba, ben Derya!</h1>
+  <p>Bu site, öğrendiklerimi ve projelerimi paylaştığım kişisel web sitemdir.</p>
+  <p>Buradan öğrenme yolculuğumu takip edebilir ve mini projelerimi görebilirsiniz.</p>
+  <button onclick="alert('Hoş geldiniz! Öğrenme yolculuğum burada devam ediyor.')">Daha Fazla</button>
 </div>
 </body>
 </html>
