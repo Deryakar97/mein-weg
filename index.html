@@ -39,7 +39,6 @@
   <div id="Vocab" class="tabcontent">
     <h2>A1 Kelimeler</h2>
     <div class="card-grid">
-
       <!-- der kelimeler -->
       <div class="card der"><span class="word">der Mann</span><span class="meaning">Adam</span></div>
       <div class="card der"><span class="word">der Tisch</span><span class="meaning">Masa</span></div>
@@ -59,27 +58,20 @@
       <div class="card noArticle"><span class="word">ich</span><span class="meaning">ben</span></div>
       <div class="card noArticle"><span class="word">du</span><span class="meaning">sen</span></div>
       <div class="card noArticle"><span class="word">wir</span><span class="meaning">biz</span></div>
-
     </div>
   </div>
 
 <script>
-  // Sekme açma
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
-    for(i = 0; i < tabcontent.length; i++){
-      tabcontent[i].style.display = "none";
-    }
+    for(i = 0; i < tabcontent.length; i++){ tabcontent[i].style.display = "none"; }
     tablinks = document.getElementsByClassName("tablinks");
-    for(i = 0; i < tablinks.length; i++){
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+    for(i = 0; i < tablinks.length; i++){ tablinks[i].className = tablinks[i].className.replace(" active",""); }
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
 
-  // Buton ile tab açma
   function openTabById(tabId) {
     const evt = { currentTarget: null };
     const tabs = document.getElementsByClassName("tablinks");
@@ -92,9 +84,8 @@
     openTab(evt, tabId);
   }
 
-  // Default aç
   document.getElementById("defaultOpen").click();
 </script>
 
 </body>
-  </html>
+</html>
